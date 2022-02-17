@@ -1,0 +1,14 @@
+<div class="bg-gray-50 border-t-2 border-gray-200 pt-8">
+  <section class="mx-auto flex px-4 flex-col items-center 2xl:px-72 xl:px-28 lg:px-4">
+    <div id="underline-yellow" class="relative">
+      <h1 class="text-7xl font-bold text-gray-800 text-center mb-16 relative z-10 lg:text-4xl">Recent Entries<span class="p-4">📓</span></h1>
+    </div>
+    {% for blog in blogs %}
+      <article class="bg-white mb-16 font-mono border-2 border-gray-200 p-8 hover:bg-gray-400 hover:bg-opacity-20">
+        <a href="{{blog.url}}"><h2 class="text-5xl font-bold text-gray-800 mb-4 lg:text-2xl">{{blog.data.title}}</h2></a>
+        <p class="text-4xl text-gray-700 lg:text-lg">{{blog.data.page.excerpt}}<a href="{{blog.url}}" class="text-blue-500">Read
+            more...</a></p>
+      </article>
+    {% endfor %}
+  </section>
+</div>

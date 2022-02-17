@@ -1,0 +1,26 @@
+{
+  "name": "jordans-eleventy-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx tailwindcss -i styles/tailwind.css -c ./tailwind.config.js -o _site/css/style.css --minify && eleventy --serve --quiet",
+    "build": "ELEVENTY_PRODUCTION=true eleventy && NODE_ENV=production npx tailwindcss -i styles/tailwind.css -c ./tailwind.config.js -o _site/css/style.css --minify"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.4",
+    "handlebars": "^4.7.7",
+    "markdown-it": "^10.0.0",
+    "markdown-it-anchor": "^6.0.1",
+    "tailwindcss": "^3.0.22"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.1.0",
+    "cssnano": "^5.0.17",
+    "postcss-cli": "^8.3.1"
+  }
+}
