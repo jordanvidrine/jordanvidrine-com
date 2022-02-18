@@ -119,7 +119,7 @@
   .project article:nth-child(odd) {
     @apply flex-row-reverse border-r-8 border-gray-900 border-solid border-opacity-10;
   }
-  
+
   .project article:nth-child(even) {
     @apply border-l-8 border-gray-900 border-solid border-opacity-10;
   }
@@ -136,7 +136,7 @@
     top: 10px;
     z-index: 1;
   }
-  
+
   #underline-blue::after {
     @apply bg-blue-200 rounded-sm rotate-1 relative;
     content: " ";
