@@ -16,6 +16,7 @@
     "handlebars": "^4.7.7",
     "markdown-it": "^10.0.0",
     "markdown-it-anchor": "^6.0.1",
+    "moment": "^2.29.1",
     "tailwindcss": "^3.0.22"
   },
   "dependencies": {
