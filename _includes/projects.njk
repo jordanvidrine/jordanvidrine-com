@@ -1,13 +1,13 @@
-<section class="project mx-auto flex px-4 flex-col items-center mb-8 w-10/12 lg:w-7/12 xl:w-6/12">
+<section class="project mx-auto flex flex-col items-center mb-8 w-11/12 lg:w-7/12 xl:w-6/12">
     <div id="underline-blue" class="relative">
       <h1 class="text-4xl font-bold text-gray-800 text-center relative mb-16">Latest Projects<span class="p-4">🛠</span></h1>
     </div>
     {% for project in collections.project %}
-      <article class="font-mono flex flex-row justify-between mb-16 p-8 bg-gray-900 bg-opacity-10 lg:mb-12">
-        <div class="flex flex-col w-6/12">
+      <article class="font-mono mb-16 p-8 bg-gray-900 bg-opacity-10 flex flex-col justify-between sm:flex-row md:flex-row lg:mb-12 lg:flex-row">
+        <div class="flex flex-col w-full sm:w-6/12 md:w-6/12 lg:w-6/12 xl:w-6/12">
           <h3 class="text-2xl text-center font-bold text-gray-800 mb-4 lg:text-xl lg:text-left">{{ project.data.title }}</h3>
           <p class="text-md text-center text-gray-700 lg:text-base lg:text-left lg:text-lg">{{ project.data.page.excerpt | safe }} </p>
-          <span class="text-2xl text-center my-8 lg:text-base lg:text-left lg:my-0 lg:mt-4">
+          <span class="text-center my-8 text-xl lg:text-base lg:text-left lg:my-0 lg:mt-4">
           {% if project.data.process %}
             <a class="text-blue-500 hover:text-blue-700 font-semibold" href="{{project.data.code}}">View Code</a> | 
             <a class="text-blue-500 hover:text-blue-700 font-semibold" href="{{project.data.process}}">Process Entries</a>
@@ -17,7 +17,7 @@
           {% endif %}
           </span>
         </div>
-        <div class="flex flex-col justify-center items-center w-5/12">
+        <div class="flex flex-col justify-center items-center w-full sm:w-5/12 md:w-5/12 lg:w-5/12 xl:w-5/12">
           <img
             class="my-img w-full"
             src="{{ project.data.preview | url }}"
