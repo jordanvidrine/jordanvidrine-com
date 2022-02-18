@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npx tailwindcss -i styles/tailwind.css -c ./tailwind.config.js -o _site/css/style.css --minify && eleventy --serve --quiet",
+    "start": "npx eleventy --serve --quiet --watch && tailwindcss -i styles/tailwind.css -c ./tailwind.config.js -o _site/css/style.css",
     "build": "ELEVENTY_PRODUCTION=true eleventy && NODE_ENV=production npx tailwindcss -i styles/tailwind.css -c ./tailwind.config.js -o _site/css/style.css --minify"
   },
   "keywords": [],
