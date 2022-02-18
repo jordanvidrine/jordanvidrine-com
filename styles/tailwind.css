@@ -148,3 +148,10 @@
     z-index: -100;
   }
 }
+
+.custom-hero {
+  background: url("/assets/img/hero-2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 140px;
+}
