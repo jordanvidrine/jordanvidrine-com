@@ -1,7 +1,7 @@
 const markdownIt = require("markdown-it");
 const markdownItAnchor = require("markdown-it-anchor");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
-const moment = require('moment');
+const moment = require("moment");
 
 const now = String(Date.now());
 
@@ -13,9 +13,9 @@ module.exports = function (eleventyConfig) {
     return now;
   });
 
-  eleventyConfig.addFilter('dateIso', date => {
-    return moment(date).utc().format('LL'); // May 31, 2019
-  })
+  eleventyConfig.addFilter("dateIso", date => {
+    return moment(date).utc().format("LL"); // May 31, 2019
+  });
 
   // excerpt parsing
   eleventyConfig.setFrontMatterParsingOptions({
@@ -24,9 +24,13 @@ module.exports = function (eleventyConfig) {
     excerpt_separator: "<!--more-->"
   });
 
-  //set handlebars
-  let handlebars = require("handlebars");
-  eleventyConfig.setLibrary("hbs", handlebars);
+  eleventyConfig.addShortcode("listFunction", function (list) {
+    return list
+      .map(item => {
+        return `<span class="text-sm mr-2 mb-2 inline-block text-gray-800 bg-gray-900 bg-opacity-10 rounded px-2">${item}</span>`;
+      })
+      .join(" ");
+  });
 
   //syntax highlight
   eleventyConfig.addPlugin(syntaxHighlight);

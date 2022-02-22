@@ -1,0 +1,8 @@
+<div class="flex flex-col">
+  <span>Tools:</span>
+  <div class="flex flex-row">
+   {% for tool in project.data.tools %}
+      <span>{{ tool }}</span>
+    {% endfor %}
+  </div>
+</div>
