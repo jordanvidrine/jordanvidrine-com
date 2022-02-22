@@ -84,10 +84,10 @@
 
 /* Custom */
 #underline-yellow::after {
-  @apply bg-yellow-200 rounded-sm rotate-1 relative;
+  @apply bg-gradient-to-r from-yellow-200 to-yellow-200/25 rounded-sm rotate-1 relative;
   content: " ";
   width: 100%;
-  height: 22px;
+  height: 30px;
   position: absolute;
   left: -7px;
   top: 19px;
@@ -95,10 +95,10 @@
 }
 
 #underline-blue::after {
-  @apply bg-blue-200 rounded-sm rotate-1 relative;
+  @apply bg-gradient-to-r from-blue-200 to-blue-200/25 rounded-sm rotate-1 relative;
   content: " ";
   width: 100%;
-  height: 22px;
+  height: 30px;
   position: absolute;
   left: -7px;
   top: 19px;
@@ -106,10 +106,10 @@
 }
 
 #underline-discourse::after {
-  @apply bg-yellow-200 rounded-sm rotate-1 relative;
+  @apply bg-gradient-to-r from-yellow-200 to-yellow-200/25 rounded-sm rotate-1 relative;
   content: " ";
   width: 100%;
-  height: 22px;
+  height: 30px;
   position: absolute;
   left: -7px;
   top: 19px;
@@ -140,7 +140,7 @@
 
 @media screen and (min-width: 768px) {
   #underline-yellow::after {
-    @apply bg-yellow-200 rounded-sm rotate-1 relative;
+    @apply bg-gradient-to-r from-yellow-200 to-yellow-200/25 rounded-sm rotate-1 relative;
     content: " ";
     width: 100%;
     height: 30px;
@@ -151,7 +151,7 @@
   }
 
   #underline-blue::after {
-    @apply bg-blue-200 rounded-sm rotate-1 relative;
+    @apply bg-gradient-to-r from-blue-200 to-blue-200/25 rounded-sm rotate-1 relative;
     content: " ";
     width: 100%;
     height: 30px;
