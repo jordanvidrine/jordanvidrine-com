@@ -1,0 +1,35 @@
+<article class="font-mono mb-16 p-8 bg-gray-900 bg-opacity-10 flex flex-col justify-between sm:flex-row md:flex-row lg:mb-12 lg:flex-row">
+  <div class="flex flex-col w-full sm:w-6/12 md:w-6/12 lg:w-6/12 xl:w-6/12">
+    <h3 class="text-2xl mb-2 font-bold text-gray-800 lg:text-2xl lg:text-left">{{ project.data.title }}</h3>
+    <p class="mb-4 text-sm"><span class="font-semibold">Created on:</span> {{ project.data.created_at | dateIso }}</p>
+    {{ project.templateContent | safe }}
+    {% if project.data.tools %}
+      <span class="font-semibold text-sm mt-4 mb-2">Tools:</span>
+      <div class="flex flex-row flex-wrap mb-4">
+        {% listFunction project.data.tools %}
+      </div>
+    {% endif %}
+    {% if project.data.live or project.data.code %}
+      <span class="text-xl text-center my-8 lg:text-base lg:text-left lg:mt-auto lg:my-0 md:mt-auto md:my-0">
+        {% if project.data.live %}
+        <a class="my-link font-semibold" href="{{project.data.live}}">Live Site</a>
+        {% endif %}
+        {% if project.data.code %} | 
+        <a class="my-link font-semibold" href="{{project.data.code}}">Git Repo</a>
+        {% endif %}
+      </span>
+    {% endif %}
+  </div>
+  <div class="flex flex-col justify-center items-center w-full sm:w-5/12 md:w-5/12 lg:w-5/12 xl:w-5/12">
+  {% if project.data.live %}
+    <a href="{{project.data.live}}">
+  {% else %}
+    <a>
+  {% endif %}
+    <img
+      class="my-img w-full showcased-img"
+      src="{{ project.data.preview | url }}"
+      alt="{{ project.data.title }}">
+  </a>
+  </div>
+</article>
