@@ -164,7 +164,7 @@
   }
   
   #underline-yellow::after {
-    @apply bg-gradient-to-r from-yellow-200 to-yellow-200/25 rounded-sm rotate-1 relative;
+    @apply bg-gradient-to-r from-yellow-200 to-yellow-200/25 rounded-sm rotate-1 rounded;
     content: " ";
     width: 100%;
     height: 30px;
@@ -175,7 +175,7 @@
   }
 
   #underline-blue::after {
-    @apply bg-gradient-to-r from-blue-200 to-blue-200/25 rounded-sm rotate-1 relative;
+    @apply bg-gradient-to-r from-blue-200 to-blue-200/25 rounded-sm rotate-1 rounded;
     content: " ";
     width: 100%;
     height: 30px;
