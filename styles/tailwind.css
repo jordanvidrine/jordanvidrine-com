@@ -186,12 +186,12 @@
   }
 }
 
-.custom-hero {
+/* .custom-hero {
   background: url("/assets/img/hero.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 140px;
-}
+} */
 
 .my-link {
   @apply text-blue-500 font-semibold hover:text-blue-700 hover:cursor-pointer;
