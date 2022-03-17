@@ -6,8 +6,10 @@
     {% if project.data.process %}
       <a class="my-link font-semibold" href="{{project.data.code}}">View Code</a> | 
       <a class="my-link font-semibold" href="{{project.data.process}}">Process Entries</a>
-    {% else %}
+    {% elseif project.data.live %}
       <a class="my-link font-semibold" href="{{project.data.live}}">Live Site</a> | 
+      <a class="my-link font-semibold" href="{{project.data.code}}">View Code</a>
+    {% else %}
       <a class="my-link font-semibold" href="{{project.data.code}}">View Code</a>
     {% endif %}
     </span>
