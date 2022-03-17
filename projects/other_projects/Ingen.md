@@ -1,7 +1,6 @@
 ---
 title: 'InGen: A Static Site Generator'
 code: 'https://github.com/jordanvidrine/InGen'
-process: 'https://www.jordanvidrine.com/2019/08/august-27th-&-28th'
 preview: '/assets/img/ingen.jpg'
 tags: 'other_project'
 date: 2022-01-03
