@@ -196,3 +196,7 @@
 .my-link {
   @apply text-blue-500 font-semibold hover:text-blue-700 hover:cursor-pointer;
 }
+
+.my-height {
+  height: 100vh;
+}
