@@ -4,17 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npx eleventy --serve --quiet --watch",
-    "build": "ELEVENTY_PRODUCTION=true eleventy && NODE_ENV=production npx tailwindcss -i styles/tailwind.css -c ./tailwind.config.js -o _site/css/style.css --minify"
+    "start": "npx @11ty/eleventy --serve & npx tailwindcss -i styles/tailwind.css -c ./tailwind.config.js -o _site/css/style.css --minify --watch",
+    "build": "ELEVENTY_PRODUCTION=true eleventy && NODE_ENV=production npx tailwindcss -i styles/tailwind.css -c ./tailwind.config.js -o _site/css/style.css --minify --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.0",
+    "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.4",
     "handlebars": "^4.7.7",
-    "markdown-it": "^10.0.0",
+    "markdown-it": "^14.1.0",
     "markdown-it-anchor": "^6.0.1",
     "moment": "^2.29.1",
     "tailwindcss": "^3.0.22"

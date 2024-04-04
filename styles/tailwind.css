@@ -194,9 +194,9 @@
 } */
 
 .my-link {
-  @apply text-blue-500 font-semibold hover:text-blue-700 hover:cursor-pointer;
+  @apply text-blue-700 font-semibold hover:text-blue-900 hover:cursor-pointer;
 }
 
-.my-height {
-  height: 100vh;
+.my-experience {
+  /* border: 3px dashed blue; */
 }
